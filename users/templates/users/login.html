@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load crispy_forms_tags %}
+
+
+
+{% block baseContent %}
+
+
+    <div class="top my-2">
+    <h1>School Management System</h1>
+    </div>
+    <div
+    class="login_section d-flex justify-content-center align-items-center my-1"
+    >
+    <div class="d-flex login_box justify-content-center align-items-center">
+        <form method="POST" novalidate>
+        {% csrf_token %}
+        <div class="mb-1">
+            <!-- <input type="username" class="form-control" placeholder="username"> -->
+            {{ form.username|as_crispy_field }}
+        </div>
+        <div class="mb-3">
+            <!-- <input type="password" class="form-control" placeholder="password"> -->
+            {{ form.password|as_crispy_field }}
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+        <small class="mt-5"><a href="">forgot password?</a></small>
+        </form>
+    </div>
+    </div>
+
+{% endblock baseContent %}
