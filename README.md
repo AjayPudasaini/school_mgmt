@@ -44,6 +44,8 @@ python manage.py createsuperuser (fill all fields with validate data, username m
 
 step 9 
 
-localhost:8000
+open browser
 
-localhost:8000/admin   // school admin side
+http://localhost:8000
+
+http://localhost:8000/admin   // school admin side
